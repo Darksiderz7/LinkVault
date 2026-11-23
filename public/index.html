@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Save and organize useful websites with LinkVault">
+  <title>LinkVault</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">YOUR PERSONAL BOOKMARK HUB</p>
+      <h1>LinkVault</h1>
+      <p>Save, organize, and quickly find the websites that matter.</p>
+    </div>
+    <div class="stat"><strong id="link-count">0</strong><span>saved links</span></div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Save a new link</h2>
+      <form id="link-form">
+        <label>Title<input name="title" placeholder="Project documentation" required></label>
+        <label>URL<input name="url" type="url" placeholder="https://example.com" required></label>
+        <label>Category
+          <select name="category" required>
+            <option value="">Choose a category</option>
+            <option>Development</option><option>Cloud</option><option>School</option>
+            <option>Research</option><option>Personal</option>
+          </select>
+        </label>
+        <label class="wide">Description<input name="description" placeholder="Why is this link useful?"></label>
+        <button type="submit">Save link</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="library">
+      <div class="library-heading">
+        <div><p class="eyebrow">LIBRARY</p><h2>Your saved links</h2></div>
+        <input id="search" type="search" placeholder="Search links..." aria-label="Search saved links">
+      </div>
+      <div id="links" class="links"></div>
+      <p id="empty" class="empty" hidden>No matching links found.</p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

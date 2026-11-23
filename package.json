@@ -1,0 +1,16 @@
+{
+  "name": "linkvault",
+  "version": "1.0.0",
+  "description": "A full-stack bookmark management MVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
